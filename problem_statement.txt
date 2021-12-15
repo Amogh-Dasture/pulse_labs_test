@@ -1,0 +1,15 @@
+Create a project with following capability: 
+Users can anonymously post a discussion which will have following fields 
+- Text field 
+- Tags for specialty (each discussion can have multiple tags)
+- created on 
+
+Expose Api for following things: 
+- Create Discussion 
+- Update Discussion 
+- Delete Discussion 
+- Get list of discussion based on tags 
+- Get list of discussions based on certain text, which is available in Text field 
+- Get list of discussions based on a filter between certain dates
+
+Sys

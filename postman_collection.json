@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "161a92c4-7d96-4e47-bf4d-9c5b6cc193f1",
+		"name": "Pulse Labs test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\" : \"Test discussion 2\",\r\n    \"tags\" : [\"tag1\",\"tag2\",\"tag3\"],\r\n    \"created_on\" : \"2021-12-15 12:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"text\" : \"Test discussion updated\",\r\n    \"tags\" : [\"tag1\",\"tag2\",\"tag3\"],\r\n    \"created_on\" : \"2021-12-15 14:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Text based",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query_type\":\"text\",\r\n    \"search_text\":\"discussion\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Date based",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query_type\":\"date\",\r\n    \"start_date\":\"2021-12-13\",\r\n    \"end_date\":\"2021-12-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Tag based",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query_type\":\"tag\",\r\n    \"tags\":[\"tag3\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/discussion",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"discussion"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
